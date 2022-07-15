@@ -9,7 +9,7 @@
         <div class="content-azzurro ">
             <div class="posizionamento-elementi">
                 <ul>
-                    <li></li>
+                    <li v-for="(image,index) in listImagesForBlueBand" :key="index"><img :src="image.image" alt="NON TROVATO"></li>
                 </ul>
             </div>
             
@@ -19,6 +19,31 @@
 </template>
 
 <script>
+
+export default{
+    data: function(){
+        return{
+            listImagesForBlueBand:[
+                        {
+                            image: '../assets/buy-comics-digital-comics.png'
+                        },
+                        {
+                            image: '../assets/buy-comics-merchandise.png'
+                        },
+                        {
+                            image: '../buy-comics-shop-locator.png'
+                        },
+                        {
+                            image: '../assets/buy-comics-subscriptions.png'
+                        },
+                        {
+                            image: '../assets/buy-dc-power-visa.svg'
+                        }
+                       
+                    ]
+        }
+    }
+}
 
 </script>
 

@@ -64,7 +64,7 @@ export default{
 <style lang="scss" scoped>
 
  .navbar{
-    padding-top: 20px;
+    padding: 20px 0px;
     display: flex;
     justify-content: space-around;
     max-width: 1500px;
