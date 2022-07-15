@@ -7,9 +7,13 @@
         </div>
         <!-- div azzurro che poi dovò mettere in un altro component -->
         <div class="content-azzurro ">
-            <div class="posizionamento-elementi">
+            <div class="posizionamento-elementi content-container content-container-images">
                 <ul>
-                    <li v-for="(image,index) in listImagesForBlueBand" :key="index"><img :src="image.image" alt="NON TROVATO"></li>
+                    <li v-for="(element,index) in listImagesForBlueBand" :key="index">
+                        <img :src="element.image" alt="NON TROVATO">
+                        <p class="text-style">text</p>
+                    </li>
+                    
                 </ul>
             </div>
             
@@ -24,20 +28,21 @@ export default{
     data: function(){
         return{
             listImagesForBlueBand:[
+                
                         {
-                            image: '../assets/buy-comics-digital-comics.png'
+                            image: '../img/buy-comics-digital-comics.png'
                         },
                         {
-                            image: '../assets/buy-comics-merchandise.png'
+                            image: '../img/buy-comics-merchandise.png'
                         },
                         {
-                            image: '../buy-comics-shop-locator.png'
+                            image: '../img/buy-comics-subscriptions.png'
                         },
                         {
-                            image: '../assets/buy-comics-subscriptions.png'
+                            image: '../img/buy-comics-shop-locator.png'
                         },
                         {
-                            image: '../assets/buy-dc-power-visa.svg'
+                            image: '../img/buy-dc-power-visa.svg'
                         }
                        
                     ]
@@ -54,6 +59,11 @@ export default{
     background-color: rgb(26, 25, 25);
     height: 200px;
 }
+.content-azzurro{
+    height: 250px;
+    background-color: rgb(0, 178, 238);
+}
+
 h1{
     color: white;
 }
@@ -66,8 +76,27 @@ h1{
     align-items: center;
     height: 100%;
 }
-.content-azzurro{
-    height: 250px;
-    background-color: rgb(0, 178, 238);
+
+.content-container-images{
+    justify-content: center;
 }
+ul{
+    display: flex;
+    list-style: none;
+}
+ul li{
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+}
+img{
+        width: 56px;
+        height: 62px;
+}
+.text-style{
+    font-size: 25px;
+    color: white;
+    padding-left: 15px;
+}
+
 </style>
