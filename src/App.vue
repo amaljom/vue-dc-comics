@@ -20,6 +20,18 @@ export default {
 </script>
 
 <style lang="scss">
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header, main, Footer{
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

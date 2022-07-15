@@ -62,17 +62,22 @@ export default{
 
 
 <style lang="scss" scoped>
+
  .navbar{
-    margin-top: 1.5rem;
+    padding-top: 20px;
     display: flex;
     justify-content: space-around;
+    max-width: 1500px;
+    margin: 0 auto;
+    align-items: center;
  }
 
  ul li{
     display: inline;
     list-style: none;
     padding: 1rem;
-    font-size: 0.9rem
+    font-size: 0.9rem;
+    font-weight: bolder;
 
 }
  
