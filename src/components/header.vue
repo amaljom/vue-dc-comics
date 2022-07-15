@@ -1,16 +1,22 @@
 <template>
 <!-- CREO UN DIV DOVE METTERE L'HEADER -->
 <!-- ALL' INTERNO DI ESSO CREO DUE DIV CONTENTI RISPETTIVAMENTE LOGO E LA LISTA -->
-  <header>
+  <div>
         <nav>
             <!-- logo -->
             <div>
                 <img src="../assets/dc-logo.png" alt="Non trovato">
             </div>
             <!-- lista -->
-            <div></div>
+            <div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
         </nav>
-  </header>
+  </div>
 </template>
 
 <script>
