@@ -94,4 +94,8 @@ img{
     color: white;
     padding-left: 15px;
 }
+main{
+    position: relative;
+    z-index: 50;
+}
 </style>

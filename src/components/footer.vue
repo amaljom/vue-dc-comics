@@ -34,7 +34,9 @@
             </div>
         </div>
         <!-- IMMAGINE -->
-        <div></div>
+        <div>
+            <img class="bg-logo" src="../assets/dc-logo-bg.png" alt="">
+        </div>
     </div>
   </footer>
 </template>
@@ -139,15 +141,20 @@ export default{
 
 
 <style scoped lang="scss">
-.container{
+footer{
     height: 380px;
     background-image: url(../assets/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.container-ul{
+.container{
+    display: flex;
     max-width: 1200px;
     margin: 0 auto;
+    justify-content: space-between;
+}
+.container-ul{
+    
     color: white;
     display: flex;
 }
@@ -170,5 +177,10 @@ li h2{
 a{
     text-decoration: none;
     color: rgb(185, 184, 184);
+}
+.bg-logo{
+    position: relative;
+    bottom: 106px;
+    z-index: 1;
 }
 </style>
