@@ -68,6 +68,7 @@
         </section>
         
     </div>
+    <div class="bg-last"></div>
   </footer>
 </template>
 
@@ -229,7 +230,7 @@ a{
 }
 .signUpBorder{
     padding: 12px;
-    border: solid 2px rgb(80, 80, 231);
+    border: solid 3px rgb(80, 80, 231);
     font-weight: bolder;
     height: 50px;
 }
@@ -241,6 +242,10 @@ a{
 }
 .footerUL li h2{
     color: rgb(80, 80, 231);;
+}
+.bg-last{
+    background-color: rgb(22, 22, 22);
+    height: 100px
 }
 
 </style>
