@@ -38,6 +38,36 @@
             <img class="bg-logo" src="../assets/dc-logo-bg.png" alt="">
         </div>
     </div>
+    <div class="index-definer">
+        <section class="container2">
+            <div class="signUpBorder">
+                <a @click.prevent href=""> SIGN-UP NOW!</a>  
+            </div>
+            <div>
+                <ul class="footerUL">
+                    <li>
+                        <h2>FOLLOW US</h2>
+                    </li>
+                    <li>
+                        <img src="../assets/footer-facebook.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../assets/footer-periscope.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../assets/footer-pinterest.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../assets/footer-twitter.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../assets/footer-youtube.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+    </div>
   </footer>
 </template>
 
@@ -152,6 +182,13 @@ footer{
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
+    height: 100%;
+}
+.container2{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
 }
 .container-ul{
     
@@ -183,4 +220,20 @@ a{
     bottom: 106px;
     z-index: 1;
 }
+.index-definer{
+    background-color: rgb(51, 51, 51);
+    position: relative;
+    z-index: 50;
+    height: 200px;
+}
+.signUpBorder{
+    padding: 12px;
+    border: solid 2px rgb(80, 80, 231);
+    font-weight: bolder;
+    height: 50px;
+}
+.footerUL{
+    display: flex;
+}
+
 </style>
