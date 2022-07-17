@@ -189,6 +189,7 @@ footer{
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
+    align-items: center;
 }
 .container-ul{
     
@@ -224,7 +225,7 @@ a{
     background-color: rgb(51, 51, 51);
     position: relative;
     z-index: 50;
-    height: 200px;
+    height: 130px;
 }
 .signUpBorder{
     padding: 12px;
@@ -234,6 +235,12 @@ a{
 }
 .footerUL{
     display: flex;
+}
+.footerUL li{
+    padding: 10px
+}
+.footerUL li h2{
+    color: rgb(80, 80, 231);;
 }
 
 </style>
