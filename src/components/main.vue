@@ -5,65 +5,62 @@
         <div class="content-container posizionamento-elementi">
             <h1> Content goes here </h1>
         </div>
-        <!-- div azzurro che poi dovò mettere in un altro component -->
-        <div class="content-azzurro ">
+    </div>
+    <!-- div azzurro che poi dovò mettere in un altro component -->
+    <div class="content-azzurro ">
             <div class="posizionamento-elementi content-container content-container-images">
                 <ul>
-                    <li v-for="(element,index) in listImagesForBlueBand" :key="index">
-                        <img :src="element.image" alt="NON TROVATO">
-                        <p class="text-style">text</p>
+                    <li v-for="(item, index) in listImagesForBlueBand" :key="index">
+                        <img :src="`../assets/buy${item.image}`" alt="non trovato">
+                        <p class="text-style">{{ item.textImage}}</p>
                     </li>
-                    
                 </ul>
             </div>
-            
         </div>
-    </div>
   </main>
 </template>
 
 <script>
-
 export default{
     data: function(){
         return{
             listImagesForBlueBand:[
-                
                         {
-                            image: '../img/buy-comics-digital-comics.png'
+                            image: '-comics-digital-comics.png',
+                            textImage: 'Digital comics'
                         },
                         {
-                            image: '../img/buy-comics-merchandise.png'
+                            image: '-comics-merchandise.png',
+                            textImage: 'DC Merchandise'
                         },
                         {
-                            image: '../img/buy-comics-subscriptions.png'
+                            image: '-comics-subscriptions.png',
+                            textImage: 'subscription'
                         },
                         {
-                            image: '../img/buy-comics-shop-locator.png'
+                            image: '-comics-shop-locator.png',
+                            textImage: 'Comics shop locator'
                         },
                         {
-                            image: '../img/buy-dc-power-visa.svg'
+                            image: '-dc-power-visa.svg',
+                            textImage: 'DC power visa'
                         }
-                       
                     ]
         }
     }
 }
-
 </script>
 
 
 <style scoped lang="scss">
-
 .black-band{
     background-color: rgb(26, 25, 25);
-    height: 200px;
+    height: 170px;
 }
 .content-azzurro{
-    height: 250px;
+    height: 210px;
     background-color: rgb(0, 178, 238);
 }
-
 h1{
     color: white;
 }
@@ -76,7 +73,6 @@ h1{
     align-items: center;
     height: 100%;
 }
-
 .content-container-images{
     justify-content: center;
 }
@@ -98,5 +94,4 @@ img{
     color: white;
     padding-left: 15px;
 }
-
 </style>
