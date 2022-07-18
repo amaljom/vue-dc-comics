@@ -92,9 +92,9 @@ ul li{
     padding: 1rem;
     font-size: 0.9rem;
     font-weight: bolder;
-    padding: 41px 13px;
+    padding: 39px 13px;
     &:hover{
-        border-bottom: solid 2px rgb(83, 83, 233);
+        border-bottom: solid 4px rgb(83, 83, 233);
     }
 }
 li a{
