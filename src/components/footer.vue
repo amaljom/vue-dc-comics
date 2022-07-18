@@ -215,6 +215,9 @@ li h2{
 a{
     text-decoration: none;
     color: rgb(185, 184, 184);
+     &:hover{
+        color: rgb(241, 241, 241);
+     }
 }
 .bg-logo{
     position: relative;
