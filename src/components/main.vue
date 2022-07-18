@@ -1,9 +1,14 @@
 <template>
   <main>
+    
     <!-- QUA INSERIAMO L'IMMAGINE -->
     <div class="container black-band">  </div>
     <!-- CREO UN DIV PER CONTENERE TUTTI GLI ELEMENTI CHE DOVRO INSERIRE COME COMPONENT -->
+    
     <section class="comics-container">
+        <div class="button-current-series">
+            <a @click.prevent href="#"> <p>CURRENT SERIES</p> </a>
+        </div>
         <div class="posizionamento-elementi">
            <div class="wrapper-comics">
                 <ComicsTemplate v-for="(item, index) in dinamicComicsList"
@@ -208,13 +213,25 @@ main{
 }
 .button-loader{
     padding: 10px;
-    background-color: rgb(64, 64, 228);
+    background-color: rgb(100, 100, 235);
     width: 15%;
     text-align: center;
     margin: 0 auto;
     margin-top: 43px;
 }
-.button-loader a{
+.button-current-series{
+    padding: 10px;
+    background-color: rgb(100, 100, 235);
+    width: 18%;
+    text-align: center;
+    font-size: bolder;
+    margin-left: 97px;
+    font-weight: bold;
+    font-size: 1.65rem;
+    position: relative;
+    bottom: 79px;
+}
+.button-loader a, .button-current-series a{
     text-decoration: none;
     color: white;
 }
