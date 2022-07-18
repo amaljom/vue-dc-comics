@@ -94,7 +94,6 @@ ul li{
     font-weight: bolder;
     padding: 41px 13px;
     &:hover{
-        cursor: pointer;
         border-bottom: solid 2px rgb(83, 83, 233);
     }
 }

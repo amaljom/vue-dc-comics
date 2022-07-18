@@ -6,32 +6,31 @@
     <!-- CREO UN DIV PER CONTENERE TUTTI GLI ELEMENTI CHE DOVRO INSERIRE COME COMPONENT -->
     
     <section class="comics-container">
-        
         <div class="posizionamento-elementi">
             <div class="button-current-series">
                 <a @click.prevent href="#"> <p>CURRENT SERIES</p> </a>
             </div>
            <div class="wrapper-comics">
                 <ComicsTemplate v-for="(item, index) in dinamicComicsList"
-                     :key="index"
-                     :img="item.thumb"
-                     :series="item.series"
-                     :price="item.price"
-                     :type="item.type"  />
+                    :key="index"
+                    :img="item.thumb"
+                    :series="item.series"
+                    :price="item.price"
+                    :type="item.type"  />
            </div>
            <div class="button-loader">
                <a @click.prevent href="#"><p>Load more</p></a> 
            </div>
         </div>
     </section>
-    <!-- div azzurro che poi dovò mettere in un altro component -->
+    <!-- div azzurro cche richiamo con un secondo component -->
     <div class="content-azzurro ">
             <div class="posizionamento-elementi content-container content-container-images">
                 <ul>
-                    <li v-for="(item, index) in listImagesForBlueBand" :key="index">
-                        <img :src="require(`../assets/buy${item.image}`)" alt="item.textImage">
-                        <p class="text-style">{{ item.textImage}}</p>
-                    </li>
+                    <BlueBandComponents v-for="(item, index) in listImagesForBlueBand"
+                        :key="index"
+                        :img="item.image"
+                        :text="item.textImage"/>
                 </ul>
             </div>
         </div>
@@ -40,11 +39,12 @@
 
 <script>
 import ComicsTemplate from './ComicsTemplate'
-
+import BlueBandComponents from "./BlueBandComponents.vue"
 export default{
 
     components:{
-        ComicsTemplate
+        ComicsTemplate,
+        BlueBandComponents
     },
 
     data: function(){
@@ -153,6 +153,16 @@ export default{
 
 
 <style scoped lang="scss">
+
+main{
+    position: relative;
+    z-index: 50;
+}
+.posizionamento-elementi{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .black-band{
     background-image: url(../assets/jumbotron.jpg);
     background-size: cover;
@@ -167,10 +177,7 @@ export default{
 h1{
     color: white;
 }
-.posizionamento-elementi{
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
 .content-container{
     display: flex;
     align-items: center;
@@ -182,25 +189,6 @@ ul{
     display: flex;
     list-style: none;
 }
-ul li{
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-}
-img{
-        width: 56px;
-        height: 62px;
-}
-.text-style{
-    font-size: 17px;
-    color: white;
-    padding-left: 12px;
-}
-main{
-    position: relative;
-    z-index: 50;
-}
-
 .comics-container{
     height: 630px;
     background-color: rgb(24, 24, 24);
