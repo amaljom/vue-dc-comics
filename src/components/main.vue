@@ -6,10 +6,11 @@
     <!-- CREO UN DIV PER CONTENERE TUTTI GLI ELEMENTI CHE DOVRO INSERIRE COME COMPONENT -->
     
     <section class="comics-container">
-        <div class="button-current-series">
-            <a @click.prevent href="#"> <p>CURRENT SERIES</p> </a>
-        </div>
+        
         <div class="posizionamento-elementi">
+            <div class="button-current-series">
+                <a @click.prevent href="#"> <p>CURRENT SERIES</p> </a>
+            </div>
            <div class="wrapper-comics">
                 <ComicsTemplate v-for="(item, index) in dinamicComicsList"
                      :key="index"
@@ -173,7 +174,6 @@ h1{
 .content-container{
     display: flex;
     align-items: center;
-    height: 100%;
 }
 .content-container-images{
     justify-content: center;
@@ -225,7 +225,6 @@ main{
     width: 18%;
     text-align: center;
     font-size: bolder;
-    margin-left: 97px;
     font-weight: bold;
     font-size: 1.65rem;
     position: relative;
