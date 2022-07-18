@@ -18,7 +18,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 
 li{
     padding: 0 30px;
