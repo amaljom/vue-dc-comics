@@ -64,7 +64,6 @@ export default{
 <style lang="scss" scoped>
 
  .navbar{
-    padding: 20px 0px;
     display: flex;
     justify-content: space-around;
     max-width: 1500px;
@@ -72,13 +71,20 @@ export default{
     align-items: center;
  }
 
+ ul{
+    padding: 43px;
+ }
  ul li{
     display: inline;
     list-style: none;
     padding: 1rem;
     font-size: 0.9rem;
     font-weight: bolder;
-
+    padding: 41px 13px;
+    &:hover{
+        cursor: pointer;
+        border-bottom: solid 2px rgb(83, 83, 233);
+    }
 }
  
  img{
