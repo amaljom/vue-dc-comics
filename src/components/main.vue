@@ -1,11 +1,19 @@
 <template>
   <main>
-    <!-- ci saranno due elementi nel main la fascia nera e quella azzurra -->
-    <div class="container black-band">
-        <div class="content-container posizionamento-elementi">
-           
+    <!-- QUA INSERIAMO L'IMMAGINE -->
+    <div class="container black-band">  </div>
+    <!-- CREO UN DIV PER CONTENERE TUTTI GLI ELEMENTI CHE DOVRO INSERIRE COME COMPONENT -->
+    <section class="comics-container">
+        <div class="posizionamento-elementi">
+           <div class="wrapper-comics">
+                <div class="width-img-wrapper" v-for="(item, index) in dinamicComicsList" :key="index">
+                    <img class="img-wrapper" :src="item.thumb" alt="">
+                    <p>{{ item.series }}</p>
+                </div>
+                
+           </div>
         </div>
-    </div>
+    </section>
     <!-- div azzurro che poi dovò mettere in un altro component -->
     <div class="content-azzurro ">
             <div class="posizionamento-elementi content-container content-container-images">
@@ -120,7 +128,7 @@ export default{
                         "series": "Catwoman",
                         "type": "graphic novel"
                     }
-                    ]
+            ]
         }
     }
 }
@@ -137,6 +145,7 @@ export default{
 .content-azzurro{
     height: 210px;
     background-color: rgb(0, 178, 238);
+    display:flex
 }
 h1{
     color: white;
@@ -174,5 +183,21 @@ img{
 main{
     position: relative;
     z-index: 50;
+}
+
+.comics-container{
+    height: 630px;
+    background-color: rgb(24, 24, 24)
+}
+.wrapper-comics{
+    display: flex;
+    flex-wrap: wrap;
+}
+.img-wrapper{
+    height: 160px;
+    width: 150px;
+}
+.width-img-wrapper{
+    width: calc( 100% / 6);
 }
 </style>
