@@ -10,7 +10,9 @@
             <!-- lista -->
             <div>
                 <ul>
-                    <li v-for="(element,index) in listElementForNavbar" :key="index">{{  element.text }}</li>
+                    <li v-for="(element,index) in listElementForNavbar" :key="index">
+                       <a @click.prevent :href="element.url"> {{ element.text }}</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -24,34 +26,44 @@ export default{
         return{
             listElementForNavbar:[
                         {
-                            text: 'CHARACTERS'
+                            text: 'CHARACTERS',
+                            url:'#'
                         },
                         {
-                            text: 'COMICS'
+                            text: 'COMICS',
+                            url:'#'
                         },
                         {
-                            text: 'MOVIES'
+                            text: 'MOVIES',
+                            url:'#'
                         },
                         {
-                            text: 'TV'
+                            text: 'TV',
+                            url:'#'
                         },
                         {
-                            text: 'GAMES'
+                            text: 'GAMES',
+                            url:'#'
                         },
                         {
-                            text: 'COLLECTIBLES'
+                            text: 'COLLECTIBLES',
+                            url:'#'
                         },
                         {
-                            text: 'VIDEOS'
+                            text: 'VIDEOS',
+                            url:'#'
                         },
                         {
-                            text: 'FANS'
+                            text: 'FANS',
+                            url:'#'
                         },
                         {
-                            text: 'NEWS'
+                            text: 'NEWS',
+                            url:'#'
                         },
                         {
-                            text: 'SHOP'
+                            text: 'SHOP',
+                            url:'#'
                         }
                     ]
         }
@@ -63,18 +75,18 @@ export default{
 
 <style lang="scss" scoped>
 
- .navbar{
+.navbar{
     display: flex;
     justify-content: space-around;
     max-width: 1500px;
     margin: 0 auto;
     align-items: center;
- }
+}
 
- ul{
+ul{
     padding: 43px;
- }
- ul li{
+}
+ul li{
     display: inline;
     list-style: none;
     padding: 1rem;
@@ -86,9 +98,13 @@ export default{
         border-bottom: solid 2px rgb(83, 83, 233);
     }
 }
- 
- img{
-    width: 80px;
- }
+li a{
+    text-decoration: none;
+    color:black;
+}
+
+img{
+width: 80px;
+}
 
 </style>
