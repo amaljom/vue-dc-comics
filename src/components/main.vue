@@ -11,7 +11,7 @@
             <div class="posizionamento-elementi content-container content-container-images">
                 <ul>
                     <li v-for="(item, index) in listImagesForBlueBand" :key="index">
-                        <img :src="`../assets/buy${item.image}`" alt="non trovato">
+                        <img :src="require(`../assets/buy${item.image}`)" alt="non trovato">
                         <p class="text-style">{{ item.textImage}}</p>
                     </li>
                 </ul>
@@ -81,7 +81,7 @@ ul{
     list-style: none;
 }
 ul li{
-    padding: 0 40px;
+    padding: 0 30px;
     display: flex;
     align-items: center;
 }
@@ -90,9 +90,9 @@ img{
         height: 62px;
 }
 .text-style{
-    font-size: 25px;
+    font-size: 17px;
     color: white;
-    padding-left: 15px;
+    padding-left: 12px;
 }
 main{
     position: relative;

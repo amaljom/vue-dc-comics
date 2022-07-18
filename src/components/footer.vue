@@ -173,7 +173,6 @@ export default{
 
 <style scoped lang="scss">
 footer{
-    height: 380px;
     background-image: url(../assets/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -183,7 +182,7 @@ footer{
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
-    height: 100%;
+    height: 380px;
 }
 .container2{
     display: flex;
@@ -226,7 +225,6 @@ a{
     background-color: rgb(51, 51, 51);
     position: relative;
     z-index: 50;
-    height: 130px;
 }
 .signUpBorder{
     padding: 12px;
@@ -245,7 +243,7 @@ a{
 }
 .bg-last{
     background-color: rgb(22, 22, 22);
-    height: 100px
+    height: 130px
 }
 
 </style>
