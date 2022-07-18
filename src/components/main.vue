@@ -13,6 +13,9 @@
                      :price="item.price"
                      :type="item.type"  />
            </div>
+           <div class="button-loader">
+               <a @click.prevent href="#"><p>Load more</p></a> 
+           </div>
         </div>
     </section>
     <!-- div azzurro che poi dovò mettere in un altro component -->
@@ -203,5 +206,16 @@ main{
     display: flex;
     flex-wrap: wrap;
 }
-
+.button-loader{
+    padding: 10px;
+    background-color: rgb(64, 64, 228);
+    width: 15%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 43px;
+}
+.button-loader a{
+    text-decoration: none;
+    color: white;
+}
 </style>
