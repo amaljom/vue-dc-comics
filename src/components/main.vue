@@ -6,11 +6,12 @@
     <section class="comics-container">
         <div class="posizionamento-elementi">
            <div class="wrapper-comics">
-                <div class="width-img-wrapper" v-for="(item, index) in dinamicComicsList" :key="index">
-                    <img class="img-wrapper" :src="item.thumb" alt="">
-                    <p>{{ item.series }}</p>
-                </div>
-                
+                <ComicsTemplate v-for="(item, index) in dinamicComicsList"
+                     :key="index"
+                     :img="item.thumb"
+                     :series="item.series"
+                     :price="item.price"
+                     :type="item.type"  />
            </div>
         </div>
     </section>
@@ -29,7 +30,14 @@
 </template>
 
 <script>
+import ComicsTemplate from './ComicsTemplate'
+
 export default{
+
+    components:{
+        ComicsTemplate
+    },
+
     data: function(){
         return{
             listImagesForBlueBand:[
@@ -187,17 +195,13 @@ main{
 
 .comics-container{
     height: 630px;
-    background-color: rgb(24, 24, 24)
+    background-color: rgb(24, 24, 24);
+    color: white;
+    padding-top: 55px;
 }
 .wrapper-comics{
     display: flex;
     flex-wrap: wrap;
 }
-.img-wrapper{
-    height: 160px;
-    width: 150px;
-}
-.width-img-wrapper{
-    width: calc( 100% / 6);
-}
+
 </style>
